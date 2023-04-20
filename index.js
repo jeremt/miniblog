@@ -1,7 +1,7 @@
 
 const router = createRouter(document.querySelector('#root'));
 
-router.get('/', async () => {
+router.route('/', async () => {
     const result = await fetch('https://dummyjson.com/posts');
     const data = await result.json();
     return `
@@ -17,7 +17,7 @@ router.get('/', async () => {
     `;
 });
 
-router.get('/post/:id', async ({id}) => {
+router.route('/post/:id', async ({id}) => {
     const result = await fetch(`https://dummyjson.com/posts/${id}`);
     const data = await result.json();
     return `
@@ -26,6 +26,6 @@ router.get('/post/:id', async ({id}) => {
     `;
 });
 
-router.get('/about', `<div>About</div>`);
+router.route('/about', `<div>About</div>`);
 
 router.start();

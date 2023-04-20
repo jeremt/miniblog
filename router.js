@@ -49,7 +49,7 @@ const createRouter = (rootElement = document.body) => {
     };
 
     const api = {
-        get: (path, content) => {
+        route: (path, content) => {
             _routes[path] = content;
             return api;
         },
