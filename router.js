@@ -1,6 +1,6 @@
 const createRouter = (rootElement = document.body) => {
     const _routes = {};
-    const _notFound = `<div>Not found.</div>`;
+    let _notFound = `<div>Not found.</div>`;
 
     const _loadRoute = async (contentElement, params = {}) => {
         if (typeof contentElement === 'string') { // handle strings

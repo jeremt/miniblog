@@ -27,5 +27,9 @@ router.route('/post/:id', async ({id}) => {
 });
 
 router.route('/about', `<div>About</div>`);
+router.notFound(`
+    <h1>404</h1>
+    <p>Cette page n'existe pas</p>
+`)
 
 router.start();
